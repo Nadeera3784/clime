@@ -45,7 +45,7 @@
         methods: {
             async onClickLogOut(){
                await axios.post('/logout');
-               window.location.href = this.$base_url+"/home";
+               location.reload();
             }
         }
     }

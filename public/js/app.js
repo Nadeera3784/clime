@@ -2310,8 +2310,6 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   methods: {
     onClickLogOut: function onClickLogOut() {
-      var _this = this;
-
       return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
         return _regeneratorRuntime().wrap(function _callee$(_context) {
           while (1) {
@@ -2321,7 +2319,7 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
                 return axios.post('/logout');
 
               case 2:
-                window.location.href = _this.$base_url + "/home";
+                location.reload();
 
               case 3:
               case "end":
