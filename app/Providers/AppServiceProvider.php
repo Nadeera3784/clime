@@ -3,6 +3,9 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Services\Weather\WeatherService;
+use App\Services\City\CityService;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +16,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton(WeatherService::class, function ($app) {
+            return new WeatherService();
+        });
+
+        $this->app->singleton(CityService::class, function ($app) {
+            return new CityService();
+        });
     }
 
     /**

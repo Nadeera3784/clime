@@ -20,3 +20,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/wt', [App\Http\Controllers\HomeController::class, 'wt'])->name('wt');
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::group(['prefix' => 'dashboard'], function () {
+        Route::get('/weather', [App\Http\Controllers\Web\WeatherController::class, 'index']);
+    });
+});

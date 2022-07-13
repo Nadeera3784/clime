@@ -41,4 +41,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * one to many
+     * 
+     */
+    public function weather_entries(){
+        return $this->hasMany(UserWeatherEntry::class);
+    }
 }

@@ -1,3 +1,3 @@
 module.exports = {
-    base_url : "http://clime.test"
+    base_url :  process.env.APP_URL
 }
