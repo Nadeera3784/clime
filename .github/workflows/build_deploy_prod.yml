@@ -33,7 +33,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
 
         script: |
-          cd /var/www/clime.app/deploy
+          cd /var/www/clime.app
           
           chmod +x server_deploy_prod.sh
 
